@@ -1,0 +1,410 @@
+<div class="product-grid-3">
+ <div class="product-card">
+  <div class="product-image">
+   <a href="https://glantix.co.ke/product/dell-inspiron-24-5400-aio-core-i5-desktop" title="Dell Inspiron 5400 AiO core i5 8GB 512GB SSD 24 Inch Desktop">
+    <img alt="Dell Inspiron 5400 AiO core i5 8GB 512GB SSD 24 Inch Desktop" class="lazy" data-original="https://glantix.co.ke/cache/medium/product/19944/Dell Inspiron 24 5400 All-in-One Desktop.webp" height="160px;" onerror="this.src='https://glantix.co.ke/vendor/webkul/ui/assets/images/product/meduim-product-placeholder.png'" src="https://glantix.co.ke/cache/medium/product/19944/Dell Inspiron 24 5400 All-in-One Desktop.webp" style="" width="160px;"/>
+   </a>
+  </div>
+  <div class="product-information">
+   <div class="product-name">
+    <a href="https://glantix.co.ke/product/dell-inspiron-24-5400-aio-core-i5-desktop" title="Dell Inspiron 5400 AiO core i5 8GB 512GB SSD 24 Inch Desktop">
+     <span>
+      Dell Inspiron 5400 AiO core i5 8GB 512GB SSD 24 Inch Desktop
+     </span>
+    </a>
+   </div>
+   <div class="product-price">
+    <span class="special-price">
+     KSH 105,000
+    </span>
+    <span class="tax-price">
+     (KSH 121,800 inc VAT)
+    </span>
+   </div>
+   <div class="cart-wish-wrap">
+    <form action="https://glantix.co.ke/checkout/cart/add/19944" method="POST">
+     <input name="_token" type="hidden" value="MWpyFwZFaKEoj6kB4w2lnBzFqRyVwCMYeGBgY1gs"/>
+     <input name="product_id" type="hidden" value="19944"/>
+     <input name="quantity" type="hidden" value="1"/>
+     <button class="btn btn-lg btn-primary addtocart" disabled="disabled">
+      Add To Cart
+     </button>
+    </form>
+   </div>
+  </div>
+ </div>
+ <div class="product-card">
+  <div class="product-image">
+   <a href="https://glantix.co.ke/product/hp-200-g4-core-i3" title="HP 200 G4 21.5 inch All-in-One PC Core i3 4GB RAM 256GB SSD DOS">
+    <img alt="HP 200 G4 21.5 inch All-in-One PC Core i3 4GB RAM 256GB SSD DOS" class="lazy" data-original="https://glantix.co.ke/cache/medium/product/19710/200g4-white.webp" height="160px;" onerror="this.src='https://glantix.co.ke/vendor/webkul/ui/assets/images/product/meduim-product-placeholder.png'" src="https://glantix.co.ke/cache/medium/product/19710/200g4-white.webp" style="" width="160px;"/>
+   </a>
+  </div>
+  <div class="product-information">
+   <div class="product-name">
+    <a href="https://glantix.co.ke/product/hp-200-g4-core-i3" title="HP 200 G4 21.5 inch All-in-One PC Core i3 4GB RAM 256GB SSD DOS">
+     <span>
+      HP 200 G4 21.5 inch All-in-One PC Core i3 4GB RAM 256GB SSD DOS
+     </span>
+    </a>
+   </div>
+   <div class="product-price">
+    <span class="special-price">
+     KSH 65,000
+    </span>
+    <span class="tax-price">
+     (KSH 75,400 inc VAT)
+    </span>
+   </div>
+   <div class="cart-wish-wrap">
+    <form action="https://glantix.co.ke/checkout/cart/add/19710" method="POST">
+     <input name="_token" type="hidden" value="MWpyFwZFaKEoj6kB4w2lnBzFqRyVwCMYeGBgY1gs"/>
+     <input name="product_id" type="hidden" value="19710"/>
+     <input name="quantity" type="hidden" value="1"/>
+     <button class="btn btn-lg btn-primary addtocart">
+      Add To Cart
+     </button>
+    </form>
+   </div>
+  </div>
+ </div>
+ <div class="product-card">
+  <div class="product-image">
+   <a href="https://glantix.co.ke/product/lenovo-v50a--24-aio-238-fhd-touch-i7-8gb-1tb-windows-10-pro" title='Lenovo V50a -24 AIO 23.8" FHD Touch i7 8GB 1TB Windows 10 PRO'>
+    <img alt='Lenovo V50a -24 AIO 23.8" FHD Touch i7 8GB 1TB Windows 10 PRO' class="lazy" data-original="https://glantix.co.ke/cache/medium/product/19162/QPmWuMth7RRdu442ktH6Fyv7dTD0W9u31Z9rDpcl.webp" height="160px;" onerror="this.src='https://glantix.co.ke/vendor/webkul/ui/assets/images/product/meduim-product-placeholder.png'" src="https://glantix.co.ke/cache/medium/product/19162/QPmWuMth7RRdu442ktH6Fyv7dTD0W9u31Z9rDpcl.webp" style="" width="160px;"/>
+   </a>
+  </div>
+  <div class="product-information">
+   <div class="product-name">
+    <a href="https://glantix.co.ke/product/lenovo-v50a--24-aio-238-fhd-touch-i7-8gb-1tb-windows-10-pro" title='Lenovo V50a -24 AIO 23.8" FHD Touch i7 8GB 1TB Windows 10 PRO'>
+     <span>
+      Lenovo V50a -24 AIO 23.8" FHD Touch i7 8GB 1TB Windows 10 PRO
+     </span>
+    </a>
+   </div>
+   <div class="product-price">
+    <span class="special-price">
+     KSH 154,000
+    </span>
+    <span class="tax-price">
+     (KSH 178,640 inc VAT)
+    </span>
+   </div>
+   <div class="cart-wish-wrap">
+    <form action="https://glantix.co.ke/checkout/cart/add/19162" method="POST">
+     <input name="_token" type="hidden" value="MWpyFwZFaKEoj6kB4w2lnBzFqRyVwCMYeGBgY1gs"/>
+     <input name="product_id" type="hidden" value="19162"/>
+     <input name="quantity" type="hidden" value="1"/>
+     <button class="btn btn-lg btn-primary addtocart">
+      Add To Cart
+     </button>
+    </form>
+   </div>
+  </div>
+ </div>
+ <div class="product-card">
+  <div class="product-image">
+   <a href="https://glantix.co.ke/product/lenovo-v30a-22-i5-all-in-one-desktop" title='Lenovo V30a-22 21.5" i5 8GB 256GB SSD All in one Desktop'>
+    <img alt='Lenovo V30a-22 21.5" i5 8GB 256GB SSD All in one Desktop' class="lazy" data-original="https://glantix.co.ke/cache/medium/product/19171/gyyTzqSxtE1WUK0vIcQvOLZsVKl4piNsfCLTO52Z.webp" height="160px;" onerror="this.src='https://glantix.co.ke/vendor/webkul/ui/assets/images/product/meduim-product-placeholder.png'" src="https://glantix.co.ke/cache/medium/product/19171/gyyTzqSxtE1WUK0vIcQvOLZsVKl4piNsfCLTO52Z.webp" style="" width="160px;"/>
+   </a>
+  </div>
+  <div class="product-information">
+   <div class="product-name">
+    <a href="https://glantix.co.ke/product/lenovo-v30a-22-i5-all-in-one-desktop" title='Lenovo V30a-22 21.5" i5 8GB 256GB SSD All in one Desktop'>
+     <span>
+      Lenovo V30a-22 21.5" i5 8GB 256GB SSD All in one Desktop
+     </span>
+    </a>
+   </div>
+   <div class="product-price">
+    <span class="special-price">
+     KSH 90,000
+    </span>
+    <span class="tax-price">
+     (KSH 104,400 inc VAT)
+    </span>
+   </div>
+   <div class="cart-wish-wrap">
+    <form action="https://glantix.co.ke/checkout/cart/add/19171" method="POST">
+     <input name="_token" type="hidden" value="MWpyFwZFaKEoj6kB4w2lnBzFqRyVwCMYeGBgY1gs"/>
+     <input name="product_id" type="hidden" value="19171"/>
+     <input name="quantity" type="hidden" value="1"/>
+     <button class="btn btn-lg btn-primary addtocart">
+      Add To Cart
+     </button>
+    </form>
+   </div>
+  </div>
+ </div>
+ <div class="product-card">
+  <div class="product-image">
+   <a href="https://glantix.co.ke/product/lenovo-30a-22-all-in-one-215-i3-4gb-256gb" title="Lenovo Thinkcentre Neo 30a-22 All in One 21.5 inch core i3 4GB RAM 256GB SSD">
+    <img alt="Lenovo Thinkcentre Neo 30a-22 All in One 21.5 inch core i3 4GB RAM 256GB SSD" class="lazy" data-original="https://glantix.co.ke/cache/medium/product/19170/cfdf.webp" height="160px;" onerror="this.src='https://glantix.co.ke/vendor/webkul/ui/assets/images/product/meduim-product-placeholder.png'" src="https://glantix.co.ke/cache/medium/product/19170/cfdf.webp" style="" width="160px;"/>
+   </a>
+  </div>
+  <div class="product-information">
+   <div class="product-name">
+    <a href="https://glantix.co.ke/product/lenovo-30a-22-all-in-one-215-i3-4gb-256gb" title="Lenovo Thinkcentre Neo 30a-22 All in One 21.5 inch core i3 4GB RAM 256GB SSD">
+     <span>
+      Lenovo Thinkcentre Neo 30a-22 All in One 21.5 inch core i3 4GB RAM 256GB SSD
+     </span>
+    </a>
+   </div>
+   <div class="product-price">
+    <span class="special-price">
+     KSH 64,000
+    </span>
+    <span class="tax-price">
+     (KSH 74,240 inc VAT)
+    </span>
+   </div>
+   <div class="cart-wish-wrap">
+    <form action="https://glantix.co.ke/checkout/cart/add/19170" method="POST">
+     <input name="_token" type="hidden" value="MWpyFwZFaKEoj6kB4w2lnBzFqRyVwCMYeGBgY1gs"/>
+     <input name="product_id" type="hidden" value="19170"/>
+     <input name="quantity" type="hidden" value="1"/>
+     <button class="btn btn-lg btn-primary addtocart">
+      Add To Cart
+     </button>
+    </form>
+   </div>
+  </div>
+ </div>
+ <div class="product-card">
+  <div class="product-image">
+   <a href="https://glantix.co.ke/product/lenovo-v30a-24-all-in-one-core-i3" title="Lenovo Thinkcentre Neo V30a-24  All in one 23.8 inch i3 4GB 256GB SSD DOS">
+    <img alt="Lenovo Thinkcentre Neo V30a-24  All in one 23.8 inch i3 4GB 256GB SSD DOS" class="lazy" data-original="https://glantix.co.ke/cache/medium/product/19169/Lenovo Thinkcentre Neo V30a-24.webp" height="160px;" onerror="this.src='https://glantix.co.ke/vendor/webkul/ui/assets/images/product/meduim-product-placeholder.png'" src="https://glantix.co.ke/cache/medium/product/19169/Lenovo Thinkcentre Neo V30a-24.webp" style="" width="160px;"/>
+   </a>
+  </div>
+  <div class="product-information">
+   <div class="product-name">
+    <a href="https://glantix.co.ke/product/lenovo-v30a-24-all-in-one-core-i3" title="Lenovo Thinkcentre Neo V30a-24  All in one 23.8 inch i3 4GB 256GB SSD DOS">
+     <span>
+      Lenovo Thinkcentre Neo V30a-24 All in one 23.8 inch i3 4GB 256GB SSD DOS
+     </span>
+    </a>
+   </div>
+   <div class="product-price">
+    <span class="special-price">
+     KSH 81,000
+    </span>
+    <span class="tax-price">
+     (KSH 93,960 inc VAT)
+    </span>
+   </div>
+   <div class="cart-wish-wrap">
+    <form action="https://glantix.co.ke/checkout/cart/add/19169" method="POST">
+     <input name="_token" type="hidden" value="MWpyFwZFaKEoj6kB4w2lnBzFqRyVwCMYeGBgY1gs"/>
+     <input name="product_id" type="hidden" value="19169"/>
+     <input name="quantity" type="hidden" value="1"/>
+     <button class="btn btn-lg btn-primary addtocart">
+      Add To Cart
+     </button>
+    </form>
+   </div>
+  </div>
+ </div>
+ <div class="product-card">
+  <div class="product-image">
+   <a href="https://glantix.co.ke/product/lenovo-v520-aio-i5-4gb-1tb-win10" title='Lenovo V520 AIO 21.5" i5 4GB 1TB Win10'>
+    <img alt='Lenovo V520 AIO 21.5" i5 4GB 1TB Win10' class="lazy" data-original="https://glantix.co.ke/cache/medium/product/19168/ia8ge7CyPFdmX08xQKQj35ejGONZyiG3drZA78Ul.webp" height="160px;" onerror="this.src='https://glantix.co.ke/vendor/webkul/ui/assets/images/product/meduim-product-placeholder.png'" src="https://glantix.co.ke/cache/medium/product/19168/ia8ge7CyPFdmX08xQKQj35ejGONZyiG3drZA78Ul.webp" style="" width="160px;"/>
+   </a>
+  </div>
+  <div class="product-information">
+   <div class="product-name">
+    <a href="https://glantix.co.ke/product/lenovo-v520-aio-i5-4gb-1tb-win10" title='Lenovo V520 AIO 21.5" i5 4GB 1TB Win10'>
+     <span>
+      Lenovo V520 AIO 21.5" i5 4GB 1TB Win10
+     </span>
+    </a>
+   </div>
+   <div class="product-price">
+    <span class="special-price">
+     KSH 78,000
+    </span>
+    <span class="tax-price">
+     (KSH 78,000 inc )
+    </span>
+   </div>
+   <div class="cart-wish-wrap">
+    <form action="https://glantix.co.ke/checkout/cart/add/19168" method="POST">
+     <input name="_token" type="hidden" value="MWpyFwZFaKEoj6kB4w2lnBzFqRyVwCMYeGBgY1gs"/>
+     <input name="product_id" type="hidden" value="19168"/>
+     <input name="quantity" type="hidden" value="1"/>
+     <button class="btn btn-lg btn-primary addtocart">
+      Add To Cart
+     </button>
+    </form>
+   </div>
+  </div>
+ </div>
+ <div class="product-card">
+  <div class="product-image">
+   <a href="https://glantix.co.ke/product/lenovo-ideacentre-aio-3-core-i5" title="Lenovo IdeaCentre AIO 3 24 inch core i5 8GB 512GB">
+    <img alt="Lenovo IdeaCentre AIO 3 24 inch core i5 8GB 512GB" class="lazy" data-original="https://glantix.co.ke/cache/medium/product/19166/rty.webp" height="160px;" onerror="this.src='https://glantix.co.ke/vendor/webkul/ui/assets/images/product/meduim-product-placeholder.png'" src="https://glantix.co.ke/cache/medium/product/19166/rty.webp" style="" width="160px;"/>
+   </a>
+  </div>
+  <div class="product-information">
+   <div class="product-name">
+    <a href="https://glantix.co.ke/product/lenovo-ideacentre-aio-3-core-i5" title="Lenovo IdeaCentre AIO 3 24 inch core i5 8GB 512GB">
+     <span>
+      Lenovo IdeaCentre AIO 3 24 inch core i5 8GB 512GB
+     </span>
+    </a>
+   </div>
+   <div class="product-price">
+    <span class="special-price">
+     KSH 100,000
+    </span>
+    <span class="tax-price">
+     (KSH 116,000 inc VAT)
+    </span>
+   </div>
+   <div class="cart-wish-wrap">
+    <form action="https://glantix.co.ke/checkout/cart/add/19166" method="POST">
+     <input name="_token" type="hidden" value="MWpyFwZFaKEoj6kB4w2lnBzFqRyVwCMYeGBgY1gs"/>
+     <input name="product_id" type="hidden" value="19166"/>
+     <input name="quantity" type="hidden" value="1"/>
+     <button class="btn btn-lg btn-primary addtocart">
+      Add To Cart
+     </button>
+    </form>
+   </div>
+  </div>
+ </div>
+ <div class="product-card">
+  <div class="product-image">
+   <a href="https://glantix.co.ke/product/lenovo-v50a--24-all-in-one-238-i7-8gb-1tb-windows-10-pro" title='Lenovo V50a -24 All in One 23.8" i7 8GB 1TB Windows 10 PRO'>
+    <img alt='Lenovo V50a -24 All in One 23.8" i7 8GB 1TB Windows 10 PRO' class="lazy" data-original="https://glantix.co.ke/cache/medium/product/19164/ho9gFH6HmKc0Ahh7F5fqp9mQMKe9I0AHiVuTvYsx.webp" height="160px;" onerror="this.src='https://glantix.co.ke/vendor/webkul/ui/assets/images/product/meduim-product-placeholder.png'" src="https://glantix.co.ke/cache/medium/product/19164/ho9gFH6HmKc0Ahh7F5fqp9mQMKe9I0AHiVuTvYsx.webp" style="" width="160px;"/>
+   </a>
+  </div>
+  <div class="product-information">
+   <div class="product-name">
+    <a href="https://glantix.co.ke/product/lenovo-v50a--24-all-in-one-238-i7-8gb-1tb-windows-10-pro" title='Lenovo V50a -24 All in One 23.8" i7 8GB 1TB Windows 10 PRO'>
+     <span>
+      Lenovo V50a -24 All in One 23.8" i7 8GB 1TB Windows 10 PRO
+     </span>
+    </a>
+   </div>
+   <div class="product-price">
+    <span class="special-price">
+     KSH 142,000
+    </span>
+    <span class="tax-price">
+     (KSH 164,720 inc VAT)
+    </span>
+   </div>
+   <div class="cart-wish-wrap">
+    <form action="https://glantix.co.ke/checkout/cart/add/19164" method="POST">
+     <input name="_token" type="hidden" value="MWpyFwZFaKEoj6kB4w2lnBzFqRyVwCMYeGBgY1gs"/>
+     <input name="product_id" type="hidden" value="19164"/>
+     <input name="quantity" type="hidden" value="1"/>
+     <button class="btn btn-lg btn-primary addtocart" disabled="disabled">
+      Add To Cart
+     </button>
+    </form>
+   </div>
+  </div>
+ </div>
+ <div class="product-card">
+  <div class="product-image">
+   <a href="https://glantix.co.ke/product/dell-vostro-3888-core-i5-4gb-ram-1tb-hdd" title="DELL Vostro 3888 core i5 4GB RAM 1TB HDD ">
+    <img alt="DELL Vostro 3888 core i5 4GB RAM 1TB HDD " class="lazy" data-original="https://glantix.co.ke/cache/medium/product/1707/338WJ6yvnB7w5Z8Mrsp228X63teq6L4a3ObFqIds.webp" height="160px;" onerror="this.src='https://glantix.co.ke/vendor/webkul/ui/assets/images/product/meduim-product-placeholder.png'" src="https://glantix.co.ke/cache/medium/product/1707/338WJ6yvnB7w5Z8Mrsp228X63teq6L4a3ObFqIds.webp" style="" width="160px;"/>
+   </a>
+  </div>
+  <div class="product-information">
+   <div class="product-name">
+    <a href="https://glantix.co.ke/product/dell-vostro-3888-core-i5-4gb-ram-1tb-hdd" title="DELL Vostro 3888 core i5 4GB RAM 1TB HDD ">
+     <span>
+      DELL Vostro 3888 core i5 4GB RAM 1TB HDD
+     </span>
+    </a>
+   </div>
+   <div class="product-price">
+    <span class="special-price">
+     KSH 76,500
+    </span>
+    <span class="tax-price">
+     (KSH 88,740 inc VAT)
+    </span>
+   </div>
+   <div class="cart-wish-wrap">
+    <form action="https://glantix.co.ke/checkout/cart/add/1707" method="POST">
+     <input name="_token" type="hidden" value="MWpyFwZFaKEoj6kB4w2lnBzFqRyVwCMYeGBgY1gs"/>
+     <input name="product_id" type="hidden" value="1707"/>
+     <input name="quantity" type="hidden" value="1"/>
+     <button class="btn btn-lg btn-primary addtocart">
+      Add To Cart
+     </button>
+    </form>
+   </div>
+  </div>
+ </div>
+ <div class="product-card">
+  <div class="product-image">
+   <a href="https://glantix.co.ke/product/lenovo-m70s-core-i7" title="Lenovo M70s core i7 4GB RAM 1TB SFF Desktop">
+    <img alt="Lenovo M70s core i7 4GB RAM 1TB SFF Desktop" class="lazy" data-original="https://glantix.co.ke/cache/medium/product/6205/oimCvq7ejwnH8RR7Ha3eppDClxgLHyB8O88kU1Ck.webp" height="160px;" onerror="this.src='https://glantix.co.ke/vendor/webkul/ui/assets/images/product/meduim-product-placeholder.png'" src="https://glantix.co.ke/cache/medium/product/6205/oimCvq7ejwnH8RR7Ha3eppDClxgLHyB8O88kU1Ck.webp" style="" width="160px;"/>
+   </a>
+  </div>
+  <div class="product-information">
+   <div class="product-name">
+    <a href="https://glantix.co.ke/product/lenovo-m70s-core-i7" title="Lenovo M70s core i7 4GB RAM 1TB SFF Desktop">
+     <span>
+      Lenovo M70s core i7 4GB RAM 1TB SFF Desktop
+     </span>
+    </a>
+   </div>
+   <div class="product-price">
+    <span class="special-price">
+     KSH 92,000
+    </span>
+    <span class="tax-price">
+     (KSH 106,720 inc VAT)
+    </span>
+   </div>
+   <div class="cart-wish-wrap">
+    <form action="https://glantix.co.ke/checkout/cart/add/6205" method="POST">
+     <input name="_token" type="hidden" value="MWpyFwZFaKEoj6kB4w2lnBzFqRyVwCMYeGBgY1gs"/>
+     <input name="product_id" type="hidden" value="6205"/>
+     <input name="quantity" type="hidden" value="1"/>
+     <button class="btn btn-lg btn-primary addtocart">
+      Add To Cart
+     </button>
+    </form>
+   </div>
+  </div>
+ </div>
+ <div class="product-card">
+  <div class="product-image">
+   <a href="https://glantix.co.ke/product/hp-elitedesk-800-g6-i7" title="HP EliteDesk 800 G6 Mini core i7 4GB 1TB HDD Desktop">
+    <img alt="HP EliteDesk 800 G6 Mini core i7 4GB 1TB HDD Desktop" class="lazy" data-original="https://glantix.co.ke/cache/medium/product/6193/weVxgAsoHeJDlJzqQG6fZMXM8gWzMMHf7yfnDHSE.webp" height="160px;" onerror="this.src='https://glantix.co.ke/vendor/webkul/ui/assets/images/product/meduim-product-placeholder.png'" src="https://glantix.co.ke/cache/medium/product/6193/weVxgAsoHeJDlJzqQG6fZMXM8gWzMMHf7yfnDHSE.webp" style="" width="160px;"/>
+   </a>
+  </div>
+  <div class="product-information">
+   <div class="product-name">
+    <a href="https://glantix.co.ke/product/hp-elitedesk-800-g6-i7" title="HP EliteDesk 800 G6 Mini core i7 4GB 1TB HDD Desktop">
+     <span>
+      HP EliteDesk 800 G6 Mini core i7 4GB 1TB HDD Desktop
+     </span>
+    </a>
+   </div>
+   <div class="product-price">
+    <span class="special-price">
+     KSH 104,000
+    </span>
+    <span class="tax-price">
+     (KSH 120,640 inc VAT)
+    </span>
+   </div>
+   <div class="cart-wish-wrap">
+    <form action="https://glantix.co.ke/checkout/cart/add/6193" method="POST">
+     <input name="_token" type="hidden" value="MWpyFwZFaKEoj6kB4w2lnBzFqRyVwCMYeGBgY1gs"/>
+     <input name="product_id" type="hidden" value="6193"/>
+     <input name="quantity" type="hidden" value="1"/>
+     <button class="btn btn-lg btn-primary addtocart">
+      Add To Cart
+     </button>
+    </form>
+   </div>
+  </div>
+ </div>
+</div>

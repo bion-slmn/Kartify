@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 '''this module define a vendor call Glantix'''
-from vendor import Vendor
+from vendors.vendor import Vendor
 from bs4 import BeautifulSoup
 
 
@@ -15,8 +15,8 @@ class Glantix(Vendor):
         - item (str, optional): Type of items to load.
         Can be 'laptop' or 'desktop'.
         '''
-        item_file = '../static_data/glantix_laptop' if item == 'laptop' \
-                    else '../static_data/glantix_desktop'
+        item_file = 'static_data/glantix_laptop' if item == 'laptop' \
+                    else 'static_data/glantix_desktop'
 
         with open(item_file, 'r') as f:
             soup = BeautifulSoup(f, 'html.parser')

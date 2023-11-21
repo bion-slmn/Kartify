@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 ''' this defines a class KenyaComputer'''
-from vendor import Vendor
+from vendors.vendor import Vendor
 from bs4 import BeautifulSoup
 
 
@@ -15,8 +15,8 @@ class Kenyacomputer(Vendor):
         - item (str, optional): Type of items to load.
         Can be 'laptop' or 'desktop'
         '''
-        item_file = '../static_data/Kenya_computers_laptop' if item == 'laptop' \
-                    else '../static_data/Kenya_computers_desktop'
+        item_file = 'static_data/Kenya_computers_laptop' if item == 'laptop' \
+                    else 'static_data/Kenya_computers_desktop'
 
         with open(item_file, 'r') as f:
             soup = BeautifulSoup(f, 'html.parser')

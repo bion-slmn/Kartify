@@ -126,5 +126,23 @@ def all_items(vendor):
     return {**all_items_g, **all_items_k}
 
 
+@app.route('/search/<item_name>')
+def search(item_name):
+    '''this is a search function that searches the data by name
+
+    - parameter:
+    item_name : (string/int) name of the item to be searched
+    '''
+    name = item_name.lower()
+    glantix = Glantix()
+    all_items_g = glantix.all()
+    kenyacomputer = Kenyacomputer()
+    all_items_k = kenyacomputer.all()
+
+    all_items = {**all_items_g, **all_items_k}
+
+    return {k: v for k, v in all_items.items() if name in k}
+
+
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)

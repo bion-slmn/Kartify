@@ -28,6 +28,7 @@ class Kenyacomputer(Vendor):
                 new['link'] = laptop.a.get('href')
                 new['img_link'] = laptop.img.get('src')
                 new['price'] = laptop.find('bdi').text.strip('KSHh\n     ')
+                new['Vendor'] = self.__class__.__name__
 
                 key = '{}.{}'.format(name, self.__class__.__name__)
                 if item == 'laptop':

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/common.css">
+    <link rel="stylesheet" href="./styles/search.css">
+    <title>Kartify-Search results</title>
+</head>
+
+<body>
+    <header>
+        <h1>Kartify</h1>
+        <div id="UtilBar">
+            <input type="search" placeholder="Laptops" name="searchName" id="searchInput" aria-label="searchInput">
+            <h5>Filter By</h5>
+            <input type="search" placeholder="Vendor" name="searchVendor" id="searchVendor" aria-label="searchVendor">
+            <h5>Order By</h5>
+            <select id="OrderBy" name="OrderBy" aria-label="OrderBy">
+                <option value="price">Price</option>
+                <option value="vendor">Vendor</option>
+                <option value="brand">Brand</option>
+            </select>
+        </div>
+    </header>
+    <article class="ItemCard" id="">
+        <a class="ItemLink" href="">
+            <h3 class="ItemName">Item Name</h3>
+            <div class="ItemImage">
+                <img src="" class="img" alt="Image of this item">
+            </div>
+            <div class="ItemInfo">
+                <div class="ItemReview">Review stars here</div>
+                <div class="ItemVendor">vendor name here</div>
+                <div class="ItemAvailability">availability status</div>
+                <div class="ItemDelivery">delivery status</div>
+                <div class="ItemPrice">price</div>
+            </div>
+        </a>
+    </article>
+</body>
+
+</html>

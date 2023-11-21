@@ -1,0 +1,61 @@
+a {
+    text-decoration: none;
+    color: black;
+    display: flex;
+    flex-flow: column;
+    flex-grow: 1;
+}
+
+h1 {
+    margin: 3px;
+}
+
+h5 {
+    margin: 0px 5px;
+}
+
+
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#UtilBar {
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.ItemCard {
+    height: 380px;
+    width: 270px;
+    border: 1px solid black;
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ItemImage {
+    width: 250px;
+    height: 200px;
+    border: 1px solid black;
+}
+
+.ItemInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-grow: 1;
+    justify-content: space-evenly;
+    padding: 3px;
+}
+
+.ItemName {
+    margin: 10px;
+    text-align: center;
+}

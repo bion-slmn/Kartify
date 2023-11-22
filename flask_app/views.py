@@ -1,4 +1,4 @@
-from flask import Flask, abort
+from flask import Flask, abort, render_template, request
 from vendors.glantix_vendor import Glantix
 from vendors.Kenya_computer_vendor import Kenyacomputer
 
@@ -70,7 +70,8 @@ def laptop(vendor):
     kenyacomputer = Kenyacomputer()
     all_items_k = kenyacomputer.item('laptop', 'kenyacomputer')
 
-    return {**all_items_g, **all_items_k}
+    all_items = {**all_items_g, **all_items_k}
+    return render_template('display.html', item_dict=all_items, items='Laptop')
 
 
 @app.route('/desktop/', defaults={'vendor': None})
@@ -95,7 +96,8 @@ def desktop(vendor):
     all_items_g = glantix.item('desktop', 'glantix')
     kenyacomputer = Kenyacomputer()
     all_items_k = kenyacomputer.item('desktop', 'kenyacomputer')
-    return {**all_items_g, **all_items_k}
+    all_items = {**all_items_g, **all_items_k}
+    return render_template('display.html', item_dict=all_items, items='Desktop')
 
 
 @app.route('/all/', defaults={'vendor': None})
@@ -123,17 +125,18 @@ def all_items(vendor):
     kenyacomputer = Kenyacomputer()
     all_items_k = kenyacomputer.all()
 
-    return {**all_items_g, **all_items_k}
+    search_items = {**all_items_g, **all_items_k}
+    return render_template('display.html', item_dict=search_items, items='Laptop and Desktop')
 
 
-@app.route('/search/<item_name>')
-def search(item_name):
+
+@app.route('/search/', methods=["POST"])
+def search():
     '''this is a search function that searches the data by name
 
-    - parameter:
-    item_name : (string/int) name of the item to be searched
     '''
-    name = item_name.lower()
+    
+    name = request.form.get('searchName').lower()
     glantix = Glantix()
     all_items_g = glantix.all()
     kenyacomputer = Kenyacomputer()
@@ -141,7 +144,24 @@ def search(item_name):
 
     all_items = {**all_items_g, **all_items_k}
 
-    return {k: v for k, v in all_items.items() if name in k}
+
+    search_items = {k: v for k, v in all_items.items() if name in k}
+    return render_template('display.html', item_dict=search_items, items=name)
+
+@app.route('/compare/<item_1>/<item_2>')
+def compare(item_1, item_2):
+    glantix = Glantix()
+    all_items_g = glantix.all()
+
+    kenyacomputer = Kenyacomputer()
+    all_items_k = kenyacomputer.all()
+    all_items = {**all_items_g, **all_items_k}
+    search_items = {k: v for k, v in all_items.items() if item_1.lower() in k or item_2.lower() in k}
+    return render_template('compare.html', item_dict=search_items, item1=item_1, item2=item_2)
+
+@app.route('/')
+def home():
+    return render_template('base.html')
 
 
 if __name__ == '__main__':

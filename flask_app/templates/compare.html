@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<h1> Comparing Results </h1>
+<h3>{{ item1 }} vs {{ item2 }}</h3>
+	
+	<div class="flex-container">
+	{%  for item in item_dict.values() %}
+		<div class='flex-item'>
+		<a href = '{{ item['link'] }}', target = _blank>
+		<img src = '{{ item["img_link"] }}' alt = '{{ item["name"] }}' style="height: 227.125px; width: 227.125px;">
+		</a>
+		<span> {{ item['name'] }} </span>
+		<p>KSH {{ item['price'] }} </p>
+
+	</div>
+{% endfor %}
+</div>
+<p> AI GENERATED CONTENT LIKE A SELLS MAN EXPLAINING IN BRIEF </p>
+
+{% endblock %}

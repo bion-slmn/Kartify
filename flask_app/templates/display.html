@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Best {{ items }}  Deals </h1>
+<div class="flex-container">
+{%  for item in item_dict.values() %}
+	<div class='flex-item'>
+	<a href = '{{ item['link'] }}', target = _blank>
+	<img src = '{{ item["img_link"] }}' alt = '{{ item["name"] }}' style="height: 227.125px; width: 227.125px;">
+	</a>
+	<span> {{ item['name'] }} </span>
+	<p>KSH {{ item['price'] }} </p>
+	<label for="compare">Compare</label>
+	<input id=count type="checkbox" name = '{{ item["name"] }}'>
+	<p id='seller'>Seller: <b>{{ item['Vendor'] }} </b></p>
+	</div>
+{% endfor %}
+</div>
+<script>
+	let item = {}
+	$("input[type='checkbox']").change(function() {
+		if(this.checked) {
+		const name = $(this).attr('name');
+		item[name] = name;
+		}
+		if ($('input:checkbox:checked').length === 2) {
+			
+			 let url = 'http://127.0.0.1:5000/compare/' + (Object.values(item).join('/'));
+			 window.open(url);
+
+			            // Uncheck the checkboxes
+			 $('input:checkbox:checked').prop('checked', false);
+			item = {};
+		}
+
+	});
+</script>
+
+{% endblock %}

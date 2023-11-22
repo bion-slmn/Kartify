@@ -1,0 +1,19 @@
+.flex-container {
+	  display: flex;
+	  flex-flow: row wrap;
+    }
+
+.flex-item {
+  background-color: light blue;
+  width: 200px;
+  margin: 10px;
+  text-align: left;
+  line-height: 15px;
+  font-size: 13px;
+}
+
+#seller {
+	text-align: Center;
+	background-color: black;
+	color: white;
+}

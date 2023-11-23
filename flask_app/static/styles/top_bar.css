@@ -57,6 +57,16 @@ cursor: pointer;
 background: #ccc;
 }
 
+#footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: red;
+	color: white;
+	text-align: center
+}
+
 @media screen and (max-width: 600px) {
 .topnav .search-container {
 float: none;
@@ -71,14 +81,4 @@ padding: 14px;
 }
 .topnav input[type=search] {
 border: 1px solid #ccc;  
-}
-
-#footer {
-position: fixed;
-left: 0;
-bottom: 0;
-width: 100%;
-background-color: red;
-color: white;
-text-align: center
 }

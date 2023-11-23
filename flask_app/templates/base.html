@@ -2,6 +2,7 @@
 <html lang='en'>
 	<head>
 		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Kartify</title>
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/top_bar.css') }}">
 		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/display.css') }}">
@@ -21,6 +22,6 @@
 		</div>
 		    {% block content %} 
 		    {% endblock %}
-		<footer>footer</footer>
+		<footer id='footer'>footer</footer>
 	</body>
 </html>

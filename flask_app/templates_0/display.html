@@ -4,7 +4,7 @@
 <div class="flex-container">
 {%  for item in item_dict.values() %}
 	<div class='flex-item'>
-	<a href = '{{ item['link'] }}', target = _blank>
+	<a href = '{{ item["link"] }}', target = _blank>
 	<img src = '{{ item["img_link"] }}' alt = '{{ item["name"] }}' style="height: 227.125px; width: 227.125px;">
 	</a>
 	<span> {{ item['name'] }} </span>

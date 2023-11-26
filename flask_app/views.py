@@ -130,23 +130,14 @@ def all_items(vendor):
 
 
 
-@app.route('/search/', methods=["POST"])
+@app.route('/search', methods=["GET"])
 def search():
     '''this is a search function that searches the data by name
 
     '''
     
-    name = request.form.get('searchName').lower()
-    glantix = Glantix()
-    all_items_g = glantix.all()
-    kenyacomputer = Kenyacomputer()
-    all_items_k = kenyacomputer.all()
-
-    all_items = {**all_items_g, **all_items_k}
-
-
-    search_items = {k: v for k, v in all_items.items() if name in k}
-    return render_template('display.html', item_dict=search_items, items=name)
+    searchName = request.args.get('searchName').lower()
+    return render_template('search.html', searchName=searchName)
 
 @app.route('/compare/<item_1>/<item_2>')
 def compare(item_1, item_2):
@@ -161,8 +152,8 @@ def compare(item_1, item_2):
 
 @app.route('/')
 def home():
-    return render_template('base.html')
+    return render_template('index.html')
 
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(port=5001, debug=True)

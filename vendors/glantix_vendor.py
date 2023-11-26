@@ -28,7 +28,7 @@ class Glantix(Vendor):
                 new['link'] = laptop.a.get('href')
                 new['img_link'] = laptop.img.get('src')
                 new['price'] = laptop.find('span', {'special-price'}).text.strip('\n KSH\xa0')
-                new['Vendor'] = self.__class__.__name__
+                new['vendor'] = self.__class__.__name__
 
                 key = '{}.{}'.format(name, self.__class__.__name__)
                 if item == 'laptop':

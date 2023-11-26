@@ -137,22 +137,22 @@ def all_items(vendor):
 
 
 
-@app_views.route('/search/', methods=["POST"])
-def search():
+@app_views.route('/search/', methods=["GET"])
+@app_views.route('/search/<name>', methods=["GET"])
+def search(name=""):
     '''this is a search function that searches the data by name
 
     '''
     
-    name = request.form.get('searchName').lower()
     glantix = Glantix()
     all_items_g = glantix.all()
     kenyacomputer = Kenyacomputer()
     all_items_k = kenyacomputer.all()
 
     all_items = {**all_items_g, **all_items_k}
+    
 
-
-    search_items = {k: v for k, v in all_items.items() if name in k}
+    search_items = all_items
     return jsonify(search_items)
 
 @app_views.route('/compare/<item_1>/<item_2>')

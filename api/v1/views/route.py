@@ -1,6 +1,7 @@
 from flask import Flask, abort, jsonify, request
-from vendors.glantix_vendor import Glantix
-from vendors.Kenya_computer_vendor import Kenyacomputer
+from vendors.phonex_vendor import Phonex
+from vendors.smartbuy_vendor import Smartbuy
+from vendors import storage
 from api.v1.views import app_views
 
 
@@ -8,49 +9,9 @@ def seller_class(vendor):
     '''perform common logic to all view function
     and return a class that matches the vendor
     '''
-    vendor_class = {'glantix': Glantix, 'kenyacomputer': Kenyacomputer}
+    vendor_class = {'phonex': Phonex, 'smartbuy': Smartbuy}
     vendor_lower = vendor.lower()
-    v_class = vendor_class.get(vendor_lower, None)
-    if v_class:
-        vend = v_class()
-        return vend
-    return None
-
-
-@app_views.route('/count/', defaults={'vendor': None})
-@app_views.route('/count/<vendor>')
-def count(vendor):
-    ''' counts the number of items that a vendor has
-    - parameter:
-    vendor:(string) this the name of the vendor it can eiter be
-                    Glantix or Kenyacomputer
-
-    if vendor is none it will return the total items of all vendors
-    '''
-    if vendor:
-        vend = seller_class(vendor)
-        if vend:
-            all_laptops = vend.item('laptop', vendor)
-            all_desktops = vend.item('desktop', vendor)
-            return ({vendor: str(len({**all_laptops, **all_desktops}))}), 200
-        abort (404,'Seller Not available')
-    # if nor vendor is specified
-    glantix = Glantix()
-    all_items_g = glantix.all()
-
-    kenyacomputer = Kenyacomputer()
-    all_items_k = kenyacomputer.all()
-    
-    count = {}
-    all_items = {**all_items_g, **all_items_k}
-
-    for k, v in all_items.items():
-        if 'glantix' in k:
-            count['Glantix'] = count.get('Glantix', 0) + 1
-        if 'kenyacomputer' in k:
-            count['KenyaComputer'] = count.get('KenyaComputer', 0) + 1
-
-    return jsonify(count)
+    return vendor_class.get(vendor_lower, None)
 
 
 @app_views.route('/laptop/', defaults={'vendor': None})
@@ -60,24 +21,16 @@ def laptop(vendor):
 
     -parameter
     vendor:(string) this the name of the vendor it can eiter be
-                        Glantix or Kenyacomputer
+                        Phonex or Smartbuy
 
     if vendor is none it will return the total items of all vendors
     '''
-    if vendor:
-        vend = seller_class(vendor)
-        if vend:
-            all_laptops = vend.item('laptop', vendor)
-            return all_laptops
-        return 'Seller Not available', 404
-
-    # if no vendor is specified
-    glantix = Glantix()
-    all_items_g = glantix.item('laptop', 'glantix')
-    kenyacomputer = Kenyacomputer()
-    all_items_k = kenyacomputer.item('laptop', 'kenyacomputer')
-
-    all_items = {**all_items_g, **all_items_k}
+    if vendor and seller_class(vendor):
+         all_items = storage.items('laptop', vendor)
+    elif  vendor and not seller_class(vendor):
+        abort('404', 'Seller not avialable')
+    else:
+        all_items = storage.items('laptop')
     return jsonify(all_items)
 
 
@@ -88,22 +41,18 @@ def desktop(vendor):
 
     -parameter
     vendor:(string) this the name of the vendor it can eiter be
-    Glantix or Kenyacomputer
+    Phonex or Smartbuy
 
     if vendor is none it will return the total items of all vendors
     '''
     if vendor:
         vend = seller_class(vendor)
         if vend:
-            all_desktops = vend.item('desktop', vendor)
-            return all_desktops
-        abort(404, 'Seller Not available')
-    # if no vendor is specified
-    glantix = Glantix()
-    all_items_g = glantix.item('desktop', 'glantix')
-    kenyacomputer = Kenyacomputer()
-    all_items_k = kenyacomputer.item('desktop', 'kenyacomputer')
-    all_items = {**all_items_g, **all_items_k}
+            all_items = storage.items('desktop', vendor)
+        abort('404', 'Seller not avialable')
+    # return all desktops from all vendors 
+    else:
+        all_items = storage.items('desktop')
     return jsonify(all_items)
 
 
@@ -114,55 +63,33 @@ def all_items(vendor):
 
         -parameter
      vendor:(string) this the name of the vendor it can eiter be
-     Glantix or Kenyacomputer
+     Phonex or Smartbuy
      if vendor is none it will return the total items of all vendors
      '''
     if vendor:
         vend = seller_class(vendor)
         if vend:
-            all_desktops = vend.item('desktop', vendor)
-            all_laptops = vend.item('laptop', vendor)
-            return {**all_laptops, **all_desktops}
+            return jsonify(storage.all(vendor))
         abort(404, 'Seller Not available')
 
     # if nor vendor is specified
-    glantix = Glantix()
-    all_items_g = glantix.all()
-
-    kenyacomputer = Kenyacomputer()
-    all_items_k = kenyacomputer.all()
-
-    search_items = {**all_items_g, **all_items_k}
-    return jsonify(search_items)
-
-
+    return jsonify(storage.all())
 
 @app_views.route('/search/', methods=["GET"])
 @app_views.route('/search/<name>', methods=["GET"])
-def search(name=""):
+def search(name=''):
     '''this is a search function that searches the data by name
-
+    it searches the item from ll vendors
     '''
-    
-    glantix = Glantix()
-    all_items_g = glantix.all()
-    kenyacomputer = Kenyacomputer()
-    all_items_k = kenyacomputer.all()
-
-    all_items = {**all_items_g, **all_items_k}
-    
-
-    search_items = all_items
+    searchName = request.args.get('searchName')
+    searchN = searchName or name
+    search_items = storage.search(searchN)
     return jsonify(search_items)
+
 
 @app_views.route('/compare/<item_1>/<item_2>')
 def compare(item_1, item_2):
-    glantix = Glantix()
-    all_items_g = glantix.all()
-
-    kenyacomputer = Kenyacomputer()
-    all_items_k = kenyacomputer.all()
-    all_items = {**all_items_g, **all_items_k}
-    search_items = {k: v for k, v in all_items.items() if item_1.lower() in k or item_2.lower() in k}
+    searchitem_1 = storage.search(item_1)
+    searchitem_2 = storage.search(item_2)
+    search_items = {**searchitem_1, **searchitem_2}
     return jsonify(search_items)
-

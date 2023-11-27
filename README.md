@@ -15,3 +15,27 @@ GET: return all desktops in the storage
 GET: return the names and id of all vendors
 ### api/v1/vendor/<vendor id>
 GET: return a vendor matching that ID
+
+This reads data dynamically for scraped websites and stores is a database.
+You have install mysql server and database like this in ubuntu
+$ sudo apt update
+$ sudo apt install mysql-server
+
+and 
+$ sudo apt-get install python3-dev
+$ sudo apt-get install libmysqlclient-dev
+$ sudo apt-get install zlib1g-dev
+$ sudo pip3 install mysqlclient
+
+the you run the file that setup the sql server
+cat setup_db.sql | mysql -u root -p
+
+Load the database.
+python3 -m load_data.py
+
+
+Finally you have to setuo environmental variables for the name and password to the database
+
+and run both the api and app.
+
+

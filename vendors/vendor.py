@@ -3,34 +3,30 @@
 items they sell (the laptop and the desktop'''
 
 from bs4 import BeautifulSoup
+from sqlalchemy import Column, Integer, String, Text
+from sqlalchemy.ext.declarative import declarative_base
+
+Base = declarative_base()
 
 
-class Vendor():
+class Vendor:
     ''' this is the base model for all vendors'''
-    _laptops = {}
-    _desktops = {}
+    name = Column(Text)
+    price = Column(Text)
+    link = Column(Text)
+    img_link = Column(Text)
+    catergory = Column(String(20))
+    vendor = Column(String(20))
+    item_id = Column(Integer, autoincrement=True, primary_key=True)
 
-    def item(self, item, name=None):
-        ''' this returns all laptops or the desktop for the Glantix vendor
-            
-            Parameter:
-            item (str) : Type of items to load. Can be 'laptop' or 'desktop'.
-            name (str, optional) : this is a name of a laptop  to be searched
-            Return a dictionary with the name of the item as the key
-        '''
+    def __init__(self, **kwargs):
+        '''initialises the vendor and its attributes'''
+        if kwargs:
+            for k, v in kwargs.items():
+                setattr(self, k, v)
 
-        if name is None:         
-            self.load_items(item)
-            return self._laptops if item == 'laptop' else self. _desktops
-        
-        if name:
-            self.load_items(item)
-            new_items = self._laptops if item == 'laptop' else self. _desktops
-
-            return {k: v for k, v in new_items.items() if name.lower() in k}
-
-    def all(self):
-        ''' return all item of this vendor both laptops and dektops'''
-        all_laptops = self.item('laptop')
-        all_desktops = self.item('desktop')
-        return {**all_desktops, **all_laptops}
+    def to_dict(self):
+        '''return the dictionary of the obj'''
+        new_dict = self.__dict__.copy()
+        new_dict.pop('_sa_instance_state')
+        return new_dict

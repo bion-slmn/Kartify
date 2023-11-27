@@ -1,6 +1,7 @@
 from flask import Flask, abort, render_template, request
-from vendors.glantix_vendor import Glantix
-from vendors.Kenya_computer_vendor import Kenyacomputer
+from vendors.phonex_vendor import Phonex
+from vendors.smartbuy_vendor import Smartbuy
+from vendors import storage
 
 app = Flask(__name__)
 app.url_map.strict_slashes = False
@@ -10,13 +11,9 @@ def seller_class(vendor):
     '''perform common logic to all view function
     and return a class that matches the vendor
     '''
-    vendor_class = {'glantix': Glantix, 'kenyacomputer': Kenyacomputer}
+    vendor_class = {'phonex': Phonex, 'smartbuy': Smartbuy}
     vendor_lower = vendor.lower()
-    v_class = vendor_class.get(vendor_lower, None)
-    if v_class:
-        vend = v_class()
-        return vend
-    return None
+    return vendor_class.get(vendor_lower, None)
 
 
 @app.route('/count/', defaults={'vendor': None})
@@ -25,7 +22,7 @@ def count(vendor):
     ''' counts the number of items that a vendor has
     - parameter:
     vendor:(string) this the name of the vendor it can eiter be
-                    Glantix or Kenyacomputer
+                    Phonex or Smartbuy
 
     if vendor is none it will return the total items of all vendors
     '''
@@ -37,11 +34,11 @@ def count(vendor):
             return str(len({**all_laptops, **all_desktops})), 200
         return 'Seller Not available', 404
     # if nor vendor is specified
-    glantix = Glantix()
-    all_items_g = glantix.all()
+    phonex = Phonex()
+    all_items_g = phonex.all()
 
-    kenyacomputer = Kenyacomputer()
-    all_items_k = kenyacomputer.all()
+    smartbuy = Smartbuy()
+    all_items_k = smartbuy.all()
 
     return str(len({**all_items_g, **all_items_k}))
 
@@ -53,24 +50,16 @@ def laptop(vendor):
 
     -parameter
     vendor:(string) this the name of the vendor it can eiter be
-                        Glantix or Kenyacomputer
+                        Phonex or Smartbuy
 
     if vendor is none it will return the total items of all vendors
     '''
-    if vendor:
-        vend = seller_class(vendor)
-        if vend:
-            all_laptops = vend.item('laptop', vendor)
-            return all_laptops
-        return 'Seller Not available', 404
-
-    # if no vendor is specified
-    glantix = Glantix()
-    all_items_g = glantix.item('laptop', 'glantix')
-    kenyacomputer = Kenyacomputer()
-    all_items_k = kenyacomputer.item('laptop', 'kenyacomputer')
-
-    all_items = {**all_items_g, **all_items_k}
+    if vendor and seller_class(vendor):
+         all_items = storage.items('laptop', vendor)
+    elif  vendor and not seller_class(vendor):
+        abort('404', 'Seller not avialable')
+    else:
+        all_items = storage.items('laptop')
     return render_template('display.html', item_dict=all_items, items='Laptop')
 
 
@@ -81,22 +70,18 @@ def desktop(vendor):
 
     -parameter
     vendor:(string) this the name of the vendor it can eiter be
-    Glantix or Kenyacomputer
+    Phonex or Smartbuy
 
     if vendor is none it will return the total items of all vendors
     '''
     if vendor:
         vend = seller_class(vendor)
         if vend:
-            all_desktops = vend.item('desktop', vendor)
-            return all_desktops
-        abort(404, 'Seller Not available')
-    # if no vendor is specified
-    glantix = Glantix()
-    all_items_g = glantix.item('desktop', 'glantix')
-    kenyacomputer = Kenyacomputer()
-    all_items_k = kenyacomputer.item('desktop', 'kenyacomputer')
-    all_items = {**all_items_g, **all_items_k}
+            all_items = storage.items('desktop', vendor)
+        abort('404', 'Seller not avialable')
+    # return all desktops from all vendors 
+    else:
+        all_items = storage.items('desktop')
     return render_template('display.html', item_dict=all_items, items='Desktop')
 
 
@@ -107,47 +92,32 @@ def all_items(vendor):
 
         -parameter
      vendor:(string) this the name of the vendor it can eiter be
-     Glantix or Kenyacomputer
+     Phonex or Smartbuy
      if vendor is none it will return the total items of all vendors
      '''
     if vendor:
         vend = seller_class(vendor)
         if vend:
-            all_desktops = vend.item('desktop', vendor)
-            all_laptops = vend.item('laptop', vendor)
-            return {**all_laptops, **all_desktops}
+            return storage.all(vendor)
         abort(404, 'Seller Not available')
 
     # if nor vendor is specified
-    glantix = Glantix()
-    all_items_g = glantix.all()
+    return storage.all()
 
-    kenyacomputer = Kenyacomputer()
-    all_items_k = kenyacomputer.all()
-
-    search_items = {**all_items_g, **all_items_k}
-    return render_template('display.html', item_dict=search_items, items='Laptop and Desktop')
-
-
-
-@app.route('/search', methods=["GET"])
+@app.route('/search/', methods=["GET"])
 def search():
     '''this is a search function that searches the data by name
-
+    it searches the item from ll vendors
     '''
-    
-    searchName = request.args.get('searchName').lower()
+    searchName = request.args.get('searchName')
     return render_template('search.html', searchName=searchName)
+
 
 @app.route('/compare/<item_1>/<item_2>')
 def compare(item_1, item_2):
-    glantix = Glantix()
-    all_items_g = glantix.all()
-
-    kenyacomputer = Kenyacomputer()
-    all_items_k = kenyacomputer.all()
-    all_items = {**all_items_g, **all_items_k}
-    search_items = {k: v for k, v in all_items.items() if item_1.lower() in k or item_2.lower() in k}
+    searchitem_1 = storage.search(item_1)
+    searchitem_2 = storage.search(item_2)
+    search_items = {**searchitem_1, **searchitem_2}
     return render_template('compare.html', item_dict=search_items, item1=item_1, item2=item_2)
 
 @app.route('/')

@@ -51,15 +51,6 @@ transition: 0.3s ease;
 padding: 5px 14px;
 }
 
-/* DROPDOWN MENU */
-.services {
-position: relative; 
-}
-
-
-.services:hover .dropdown {
-display: block;
-}
 .search-container {
 float: left;
 }
@@ -90,6 +81,12 @@ font-size: 100px;
 color: black;
 border-bottom: 4px dotted black;
 }
+h2 {
+margin-left: 40px;
+margin-top: 30px;
+font-size: 40px;
+}
+
 .section1 img{
 opacity: 0.7;
 }

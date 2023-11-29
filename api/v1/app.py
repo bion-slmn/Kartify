@@ -3,6 +3,7 @@
 from flask import Flask
 from api.v1.views import app_views
 from flask_cors import CORS
+from vendors import storage
 
 app = Flask(__name__)
 CORS(app, resources={r"/api/v1/*": {"origins": "*"}})

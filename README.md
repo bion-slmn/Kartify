@@ -26,6 +26,7 @@ MySQLdb module version 2.2.0 and MySQL 8.0
 
 ### Installing MySQL 8.0
 $ sudo apt update
+
 $ sudo apt install mysql-server
 
 ### Installing MySQLdb
@@ -49,8 +50,9 @@ $ cat setup_db.sql | mysql -u root -p
 python3 -m load_data.py
 
 ### set environmental variable for DABATABASE
-$ export PROJECT_USER=<<name of the user that was set in setup_db.sql>>
-$ export PROJECT_PWD=<<password of the user that was set in setup_db.sql>>
+$ export PROJECT_USER="name of the user that was set in setup_db.sql"
+
+$ export PROJECT_PWD="password of the user that was set in setup_db.sql"
 
 ### START THE FLASK APP AND API
 $ python3 -m flask_app.views

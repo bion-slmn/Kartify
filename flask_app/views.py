@@ -124,6 +124,10 @@ def compare(item_1, item_2):
 def home():
     return render_template('index.html')
 
+@app.route('/home')
+def home1():
+    return render_template('home.html')
+
 
 if __name__ == '__main__':
     app.run(port=5001, debug=True)

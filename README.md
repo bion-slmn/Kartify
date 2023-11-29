@@ -31,8 +31,11 @@ $ sudo apt install mysql-server
 
 ### Installing MySQLdb
 $ sudo apt-get install python3-dev
+
 $ sudo apt-get install libmysqlclient-dev
+
 $ sudo apt-get install zlib1g-dev
+
 $ sudo pip3 install mysqlclient
 
 ### Installing SQLALchemy
@@ -40,10 +43,12 @@ $ sudo pip3 install SQLAlchemy
 
 ### Installing requests and BeautifulSoup
 $ pip install requests
+
 $ pip3 install beautifulsoup4
 
 ### Starting Mysql database
 $ sudo service mysql start
+
 $ cat setup_db.sql | mysql -u root -p
 
 ### Scrape data and Load the database.
@@ -56,6 +61,7 @@ $ export PROJECT_PWD="password of the user that was set in setup_db.sql"
 
 ### START THE FLASK APP AND API
 $ python3 -m flask_app.views
+
 $ python3 -m api.v1.app
 
 The application will be running on http://localhost:5001.

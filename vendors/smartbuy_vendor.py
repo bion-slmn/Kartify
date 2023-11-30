@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-''' this defines a class KenyaComputer'''
+''' this defines a class Smartbuy'''
 from vendors.vendor import Vendor, Base
 from bs4 import BeautifulSoup
 import requests
@@ -33,9 +33,12 @@ class Smartbuy(Vendor, Base):
                 new = {}
                 name = laptop.h2.text
                 new['name'] = name
-                new['link'] = laptop.a.get('href')
-                new['img_link'] = laptop.img.get('nitro-lazy-src')
-                new['price'] = laptop.find('bdi').get_text().strip('KSH\h')
+                new['img_link'] = laptop.img.get('src')
+                link = laptop.find(
+                        'a',
+                        class_='woocommerce-LoopProduct-link woocommerce-loop-product__link')
+                new['link'] = link.get('href')
+                new['price'] = laptop.find('bdi').get_text().strip('KSHh')
                 new['vendor'] = cls.__name__
                 new['catergory'] = 'laptop' if item == 'laptop' else 'desktop'
 

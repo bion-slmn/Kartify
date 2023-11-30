@@ -4,9 +4,10 @@ from vendors.smartbuy_vendor import Smartbuy
 
 
 from vendors import storage
-#storage.drop()
+# clear all the data from the daables
+storage.drop()
 
-# loading items into memory
+# loading items into databse
 Smartbuy.load_items('desktop')
 Phonex.load_items('desktop')
 Smartbuy.load_items('laptop')

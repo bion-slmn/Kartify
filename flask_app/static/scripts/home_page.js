@@ -2,7 +2,7 @@
 $(document).ready(function () {
   $('div.card, #laptop, #desktop, #all').click(function () {
     $('html, body').animate({
-      scrollTop: $('#anchorContent').offset().top
+      scrollTop: $('#explainer').offset().top
     }, 2000);
     let url;
     const clickedId = $(this).attr('id');
@@ -13,8 +13,8 @@ $(document).ready(function () {
       url = 'http://localhost:5000/api/v1/' + clickedId;
     }
 
-    $('div.flex-content').empty(); // empty the child contents
-
+    $('div.flex-content, div#explainer').empty(); // empty the child contents
+    $("div#explainer").append(`<h2>${clickedId.toUpperCase()}</h2>`)
     $.get(url, function (data, status) {
       const keys = Object.keys(data);
       keys.forEach(function (key, index) {
@@ -26,7 +26,7 @@ $(document).ready(function () {
         const itemPrice = item.price;
         const article = `
 <article class='ItemCard' id=''>
-<a class='ItemLink' href='${itemLink}'>
+<a class='ItemLink' href='${itemLink}' target=_blank>
 <h3 class='ItemName'>${itemName}</h3>
 <div class='ItemImage'>
 <img src='${imgUrl}' alt='Image of ${itemName}'>

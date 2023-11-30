@@ -172,4 +172,12 @@ color: #fff;
 background-color: black;
 opacity: 0.9;
 }
-
+#explainer {
+color: white;
+background-color: black;
+font-size: 30px;
+text-align: center;
+padding: 5px;
+letter-spacing: 3px;
+margin: auto;
+}

@@ -14,7 +14,7 @@ vendor_class = {'phonex': Phonex, 'smartbuy': Smartbuy}
 
 
 class Db_storage:
-    ''' this define the database to store the class of the 
+    ''' this define the database to store the class of the
         vendors
     '''
     __session = None
@@ -22,7 +22,7 @@ class Db_storage:
 
     def __init__(self):
         '''constructs the engine for storage'''
-        PROJECT_USER = getenv('PROJECT_USER') 
+        PROJECT_USER = getenv('PROJECT_USER')
         PROJECT_PWD = getenv('PROJECT_PWD')
         PROJECT_DB = getenv('PROJECT_PWD')
         self.__engine = create_engine(f'mysql+mysqldb://{PROJECT_USER}:{PROJECT_PWD}@localhost/bion_db')
@@ -56,7 +56,6 @@ class Db_storage:
             self.__session.query(v_class).delete()
             self.__session.commit()
 
-        
     def all(self, cls=None):
         '''it returns a all items in the database
 
@@ -86,14 +85,16 @@ class Db_storage:
         e.g it can search for only laptops a from specific vendor
 
         parameter:
-        catergory (string): the catergory of items to be searched can be laptop or desktop
-        cls (string/optional): if true, it will search itemm of the specified category only
+        catergory (string): the catergory of items to be
+        searched can be laptop or desktop
+        cls (string/optional): if true, it will search itemm of
+        the specified class of vendor only
         else it will search for items of the all class of vendors'''
-        
         new_dict = {}
         if cls and cls in vendor_class:
             cls = vendor_class.get(cls)
-            all_obj = self.__session.query(cls).filter(cls.catergory == category)
+            all_obj = self.__session.query(cls).filter(
+                    cls.catergory == category)
             for obj in all_obj:
                 key = '{}.{}'.format(obj.name, obj.vendor)
                 new_dict[key] = obj.to_dict()
@@ -101,19 +102,37 @@ class Db_storage:
         if not cls:
             for v_class in vendor_class.values():
 
-                all_obj = self.__session.query(v_class).filter(v_class.catergory == category).all()
+                all_obj = self.__session.query(v_class).filter(
+                        v_class.catergory == category).all()
                 for obj in all_obj:
                     key = '{}.{}'.format(obj.name, obj.vendor)
                     new_dict[key] = obj.to_dict()
             return new_dict
 
-    def search(self, name):
+    def search(self, name, vendor=None):
         '''search for an item by name
         parameter:
-        name (string/int) : the name that will be used to search'''
+        name (string/int) : the name that will be used to search
+        vendor (string): name of the vendor class to search in
+        '''
         new_dict = {}
+        if vendor:
+            v_class = vendor_class.get(vendor)
+            if v_class:
+                all_obj = self.__session.query(v_class).filter(
+                        v_class.name.like('%{}%'.format(name))).all()
+                for obj in all_obj:
+                    key = '{}.{}'.format(obj.name, obj.vendor)
+                    new_dict[key] = obj.to_dict()
+                return new_dict
+            return None
+                
         for v_class in vendor_class.values():
-            all_obj = self.__session.query(v_class).filter(v_class.name.like('%{}%'.format(name))).all()
+            all_obj = self.__session.query(v_class).filter(
+                    v_class.name.like('%{}%'.format(name))
+                      ).order_by(
+                              v_class.price
+                      ).all()
             for obj in all_obj:
                 key = '{}.{}'.format(obj.name, obj.vendor)
                 new_dict[key] = obj.to_dict()

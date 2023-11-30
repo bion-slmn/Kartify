@@ -9,16 +9,23 @@ The backend uses flask to create api and template for somepages
  The application runs on port 5001 and the api runs on port 5000
 ## APIs and Methods
 This methods are for the web_Client:
-### api/stats
-GET: Return the number of laptops, desktops and total number of all computers
-### api/v1/computers
-GET: Return all computers in the storage
+### api/v1/laptop/vendor
+GET: Return the all laptops from a specific vendor
+### api/v1/desktop/vendor
+GET: Return all the desktop from a specific vendor
+### api/v1/all
+GET: Return all computers both laptops and desktops in the storage
+### api/v1/all/vendor
+GET: Return all items from the specified vendor
 ### api/v1/laptops
 GET: return all laptops in the storage
 ### api/v1/desktops
-GET: return the names and id of all vendors
-### api/v1/vendor/<vendor id>
-GET: return a vendor matching that ID
+GET: Return all desktops  in storage
+### api.v1/search/name/vendor
+GET: Return all items  whose name has the value name match the name specified in the api from the vendor specified
+### api.v1/search/name/
+GET: Return all items whose name has the value name match the name specified in the api from all vendors
+
 ## How to Install and Run the Project
 The application was built with ubuntu 20.04 , python3.8, sqlachemy version 2.0.21,
 MySQLdb module version 2.2.0 and MySQL 8.0

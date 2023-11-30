@@ -75,16 +75,23 @@ def all_items(vendor):
     # if nor vendor is specified
     return jsonify(storage.all())
 
-@app_views.route('/search/', methods=["GET"])
+@app_views.route('/search/<name>/<vendor>', methods=["GET"])
 @app_views.route('/search/<name>', methods=["GET"])
-def search(name=''):
+def search(name, vendor=None):
     '''this is a search function that searches the data by name
-    it searches the item from ll vendors
+    it searches the item from ll vendors if the name of the vendor
+    is not sprcified
+    -parameter
+    name (string): name of the items to be searched
+    vendor (string): name of the vendor it can be either be phonex
+                    smartbuy
     '''
-    searchName = request.args.get('searchName')
-    searchN = searchName or name
-    search_items = storage.search(searchN)
+    searchN = name
+    search_items = storage.search(searchN, vendor)
+    if search_items is None:
+        abort(404)
     return jsonify(search_items)
+    
 
 
 @app_views.route('/compare/<item_1>/<item_2>')

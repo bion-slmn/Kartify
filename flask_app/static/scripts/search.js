@@ -32,7 +32,7 @@ $(function () {
 	    else {
 		    link = searchLink + name;
 		}
-	    alert(link)
+	//	    alert(link)
         $.ajax({
             type: "GET",
             url: link,

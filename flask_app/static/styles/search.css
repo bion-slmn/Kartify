@@ -11,7 +11,9 @@ a {
 header h1 {
     margin: 3px;
     width: 150px;
-    text-align: center;
+    text-align: left;
+    font-family: cursive;
+    color: white;
 }
 
 h5 {
@@ -27,10 +29,11 @@ header {
     width: 100%;
     background-color: #FAFAFA;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: row wrap;
     position: sticky;
     top: 0px;
+    background-color: black;
+
 }
 
 #searchResults {
@@ -40,26 +43,40 @@ header {
 }
 
 #utilBar {
-    height: 30px;
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    flex-direction: row wrap;
+    align-items: flex-end;
     justify-content: space-evenly;
     flex-grow: 1;
 }
 
+
 #filterByDiv, #orderByDiv, #searchItemDiv {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: space-evenly;
+    align-items: flex-end;
+   justify-content: space-between;
     width: 280px;
+    padding: 20px;
+    font-size: 14px; 
 }
 
 #utilBar select {
-    width: 177px;
+    width: 65%;
+}
+input[type=search], input[type=button], select{
+	padding: 6px;
+	margin-right: 2px;
+	font-size: 17px;
+	border-radius: 8px;
 }
 
+#filterByDiv h5 {
+	font-family: cursive;
+	font-size: 17px;
+	padding-bottom: 5px;
+	color: white;
+}
 .ItemCard {
     height: 380px;
     width: 270px;
@@ -104,4 +121,13 @@ header {
     overflow: hidden;
     text-overflow: ellipsis;
     width: 85%;
+}
+.foot {
+	position: sticky;
+	background-color: black;
+	color: white;
+	text-align: center;
+	padding: 10px;
+	width: 100%;
+	bottom: 0;
 }

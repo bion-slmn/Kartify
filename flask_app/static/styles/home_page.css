@@ -181,3 +181,11 @@ padding: 5px;
 letter-spacing: 3px;
 margin: auto;
 }
+.foot {
+position: sticky;
+background-color: black;
+color: white;
+text-align: center;
+padding: 10px;
+bottom: 0;
+}

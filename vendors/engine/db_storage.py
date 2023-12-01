@@ -65,7 +65,6 @@ class Db_storage:
         new_dict = {}
         if cls is None:
             for v_class in vendor_class.values():
-                print(v_class)
                 all_obj = self.__session.query(v_class).all()
                 for obj in all_obj:
                     key = '{}.{}'.format(obj.name, obj.vendor)

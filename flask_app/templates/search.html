@@ -15,26 +15,20 @@
     <header>
         <h1>Kartify</h1>
         <div id="utilBar">
-            <div id="searchItemDiv">
-                <input type="search" placeholder="Laptops" name="searchName" id="searchInput" value="{{ searchName }}" aria-label="searchInput">
-                <input type="button" value="Search" id="searchButton">
-            </div>
             <div id="filterByDiv">
-                <h5>Filter By Vendor</h5>
+                <h5>Filter By </h5>
                 <select id="filterBy" name="filterBy" aria-label="filterBy">
-                    <option value="filterVendor">Smart Buy</option>
-                    <option value="filterBrand">Phonex</option>
+                    <option value="VendorGroup">Vendor</option>
+                    <option value="phonex">Phonex</option>
+		    <option value="smartbuy">Smartbuy</option>
                 </select>
             </div>
-            <div id="orderByDiv">
-                <h5>Order By</h5>
-                <select id="orderBy" name="orderBy" aria-label="orderBy">
-                    <option value="price">Price</option>
-                    <option value="vendor">Vendor</option>
-                    <option value="brand">Brand</option>
-                </select>
-            </div>
-        </div>
+	    <div id="utilBar">
+		    <div id="searchItemDiv">
+			    <input type="search" placeholder="Laptops" name="searchName" id="searchInput" value="{{ searchName }}" aria-label="searchInput">
+			    <input type="button" value="Search" id="searchButton">
+		    </div>
+	    </div>
     </header>
     <div id="searchResults"></div>
 </body>

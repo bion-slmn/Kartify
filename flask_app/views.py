@@ -120,11 +120,11 @@ def compare(item_1, item_2):
     search_items = {**searchitem_1, **searchitem_2}
     return render_template('compare.html', item_dict=search_items, item1=item_1, item2=item_2)
 
-@app.route('/')
-def home():
-    return render_template('index.html')
+# @app.route('/home')
+# def home():
+#     return render_template('index.html')
 
-@app.route('/home')
+@app.route('/')
 def home1():
     return render_template('home.html')
 

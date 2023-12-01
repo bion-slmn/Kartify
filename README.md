@@ -32,43 +32,43 @@ MySQLdb module version 2.2.0 and MySQL 8.0
 
 
 ### Installing MySQL 8.0
-$ sudo apt update
+$ ```sudo apt update```
 
-$ sudo apt install mysql-server
+$ ```sudo apt install mysql-server```
 
 ### Installing MySQLdb
-$ sudo apt-get install python3-dev
+$ ```sudo apt-get install python3-dev```
 
-$ sudo apt-get install libmysqlclient-dev
+$ ```sudo apt-get install libmysqlclient-dev```
 
-$ sudo apt-get install zlib1g-dev
+$ ```sudo apt-get install zlib1g-dev```
 
-$ sudo pip3 install mysqlclient
+$ ```sudo pip3 install mysqlclient```
 
 ### Installing SQLALchemy
-$ sudo pip3 install SQLAlchemy
+$ ```sudo pip3 install SQLAlchemy```
 
 ### Installing requests and BeautifulSoup
-$ pip install requests
+$ ```pip install requests```
 
-$ pip3 install beautifulsoup4
+$ ```pip3 install beautifulsoup4```
 
 ### Starting Mysql database
-$ sudo service mysql start
+$ ```sudo service mysql start```
 
-$ cat setup_db.sql | mysql -u root -p
+$ ```cat setup_db.sql | mysql -u root -p```
 
 ### Scrape data and Load the database.
-python3 -m load_data.py
+$ ```python3 load_data.py```
 
 ### set environmental variable for DABATABASE
-$ export PROJECT_USER="name of the user that was set in setup_db.sql"
+$ ```export PROJECT_USER="name of the user that was set in setup_db.sql"```
 
-$ export PROJECT_PWD="password of the user that was set in setup_db.sql"
+$ ```export PROJECT_PWD="password of the user that was set in setup_db.sql"```
 
 ### START THE FLASK APP AND API
-$ python3 -m flask_app.views
+$ ```python3 -m flask_app.views```
 
-$ python3 -m api.v1.app
+$ ```python3 -m api.v1.app```
 
 The application will be running on http://localhost:5001.

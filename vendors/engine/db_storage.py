@@ -129,10 +129,7 @@ class Db_storage:
                 
         for v_class in vendor_class.values():
             all_obj = self.__session.query(v_class).filter(
-                    v_class.name.like('%{}%'.format(name))
-                      ).order_by(
-                              v_class.price
-                      ).all()
+                    v_class.name.like('%{}%'.format(name))).all()
             for obj in all_obj:
                 key = '{}.{}'.format(obj.name, obj.vendor)
                 new_dict[key] = obj.to_dict()

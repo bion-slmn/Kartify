@@ -4,11 +4,41 @@ $(function () {
 
     function getItems () {
         let name = searchInput.val();
+	let vendor;
+	let link;
+	        
+	let value = $('#filterBy').val();
+	let searchLink = "http://localhost:5000/api/v1/search/";
+	let catergoryLink = "http://localhost:5000/api/v1/";
+	name = name.toLowerCase();
+
+	 if (name.includes('laptop') || name.includes('desktop')) {
+		 if (name.includes('laptop')) {
+			 name = 'laptop';
+		 } else {
+		         name = 'desktop';
+		 }
+		 if (value === 'VendorGroup') {
+			 link = catergoryLink + name;
+		 } else {
+			 link = catergoryLink + name + '/' + value;
+			}
+	 }
+	        
+	  else if (value != 'VendorGroup') {
+		  vendor = value;
+		  link = searchLink + name + '/' + vendor;
+	  }
+	    else {
+		    link = searchLink + name;
+		}
+	//	    alert(link)
         $.ajax({
             type: "GET",
-            url: "http://localhost:5000/api/v1/search/"+name,
+            url: link,
             success: function (data) {
-                const itemsDiv = $("#searchResults")
+                const itemsDiv = $("#searchResults");
+		itemsDiv.empty(); // clear the previous search items
                 const keys = Object.keys(data)
                 keys.forEach((key, index) => {
                     const item = data[key];
@@ -27,6 +57,7 @@ $(function () {
                             "        <span class='ItemName'>" + itemName + "</span>",
                         "            <span class='ItemVendor'>From " + itemVendor + "</span>",
                         "            <span class='ItemPrice'> KSH " + itemPrice + "</span>",
+
                         "        </div>",
                         "    </a>",
                         "</article>"

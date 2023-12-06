@@ -49,7 +49,8 @@ def desktop(vendor):
         vend = seller_class(vendor)
         if vend:
             all_items = storage.items('desktop', vendor)
-        abort('404', 'Seller not avialable')
+        else:
+            abort('404', 'Seller not avialable')
     # return all desktops from all vendors 
     else:
         all_items = storage.items('desktop')
@@ -82,16 +83,15 @@ def search(name, vendor=None):
     it searches the item from ll vendors if the name of the vendor
     is not sprcified
     -parameter
-    name (string): name of the items to be searched
-    vendor (string): name of the vendor it can be either be phonex
-                    smartbuy
+         name (string): name of the items to be searched
+         vendor (string): name of the vendor it can be either be phonex or 
+         smartbuy
     '''
     searchN = name
     search_items = storage.search(searchN, vendor)
     if search_items is None:
         abort(404)
     return jsonify(search_items)
-    
 
 
 @app_views.route('/compare/<item_1>/<item_2>')

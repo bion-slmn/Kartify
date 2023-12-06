@@ -167,3 +167,11 @@ p {
     margin-left: 40px;
     font-size: 1.1em;
 }
+.foot {
+position: sticky;
+background-color: black;
+color: white;
+text-align: center;
+padding: 10px;
+bottom: 0;
+}

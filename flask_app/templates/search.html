@@ -13,21 +13,32 @@
 
 <body>
     <header>
-        <h1 class="logo">Kartify</h1>
+
+        <h1 class="logo"><a href="/">Kartify</a></h1>
+
         <div id="utilBar">
+            <div id="searchItemDiv">
+                <input type="search" placeholder="Laptops" name="searchName" id="searchInput" value="{{ searchName }}"
+                    aria-label="searchInput">
+                <input type="button" value="Search" id="searchButton">
+            </div>
             <div id="filterByDiv">
                 <h5>Filter By </h5>
                 <select id="filterBy" name="filterBy" aria-label="filterBy">
                     <option value="VendorGroup">Vendor</option>
                     <option value="phonex">Phonex</option>
-		    <option value="smartbuy">Smartbuy</option>
+                    <option value="smartbuy">Smartbuy</option>
                 </select>
             </div>
-		    <div id="searchItemDiv">
-			    <input type="search" placeholder="Laptops" name="searchName" id="searchInput" value="{{ searchName }}" aria-label="searchInput">
-			    <input type="button" value="Search" id="searchButton">
-		    </div>
-	    </div>
+            <div id="orderByDiv">
+                <h5>Order By</h5>
+                <select id="orderBy" name="orderBy" aria-label="orderBy">
+                    <option value="price">Price</option>
+                    <option value="vendor">Vendor</option>
+                    <option value="brand">Brand</option>
+                </select>
+            </div>
+        </div>
     </header>
     <div id="searchResults"></div>
     <footer class="foot">2023 Kartify</footer>

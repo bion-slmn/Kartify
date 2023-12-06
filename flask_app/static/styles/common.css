@@ -1,13 +1,12 @@
 body {
     margin: 0px;
-    display: flex;
-    flex-direction: column;
     background-color: black;
     color: #6d57cb;
     font-family: "Courier New";
 }
 /* LOGO */
-.logo {
+.logo a {
+    color: #6d57cb;
     font-size: 32px;
     font-weight: 800;
     text-transform: uppercase;
@@ -15,3 +14,6 @@ body {
     margin-left: 10px;
 }
 
+a {
+    text-decoration: none;
+}

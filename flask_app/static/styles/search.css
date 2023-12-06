@@ -1,4 +1,4 @@
-a {
+.ItemLink {
     text-decoration: none;
     color: black;
     display: flex;
@@ -12,8 +12,6 @@ header h1 {
     margin: 3px;
     width: 150px;
     text-align: left;
-    font-family: cursive;
-    color: white;
 }
 
 h5 {
@@ -28,13 +26,18 @@ body {
 header {
     width: 100%;
     display: flex;
-    flex-direction: row wrap;
+    flex-direction: row;
+    align-items: center;
     position: sticky;
     top: 0px;
     background-color: black;
     border-bottom: 1px solid #6d57cb;
     z-index: 1;
     height: 70px;
+}
+
+#searchButton {
+    width: 80px;
 }
 
 #searchResults {
@@ -46,40 +49,37 @@ header {
 
 #utilBar {
     display: flex;
-    flex-direction: row wrap;
-    align-items: flex-end;
+    flex-direction: row;
+    align-items: center;
     justify-content: space-evenly;
     flex-grow: 1;
 }
 
 
-#filterByDiv, #orderByDiv, #searchItemDiv {
+#filterByDiv,
+#orderByDiv,
+#searchItemDiv {
     display: flex;
     flex-direction: row;
-    align-items: flex-end;
-   justify-content: space-between;
+    align-items: center;
+    justify-content: space-evenly;
     width: 280px;
-    padding: 10px;
+    padding: 6px;
     border: 1px solid #6d57cb;
     border-radius: 7px;
 }
 
-#utilBar select {
+#utilBar {
     width: 65%;
 }
-input[type=search], input[type=button], select{
-	padding: 6px;
-	margin-right: 2px;
-	font-size: 17px;
-	border-radius: 8px;
+
+input[type=search],
+input[type=button],
+select {
+    padding: 2px;
+    border-radius: 8px;
 }
 
-#filterByDiv h5 {
-	font-family: cursive;
-	font-size: 17px;
-	padding-bottom: 5px;
-	color: white;
-}
 .ItemCard {
     height: 380px;
     width: 270px;
@@ -95,7 +95,7 @@ input[type=search], input[type=button], select{
 
 .ItemCard:hover {
     box-shadow: 0px 0px 20px 11px black;
-    transform: scale(1.01); 
+    transform: scale(1.01);
     z-index: 0;
 }
 
@@ -132,21 +132,13 @@ input[type=search], input[type=button], select{
     text-overflow: ellipsis;
     width: 200px;
 }
+
 .foot {
-	position: sticky;
-	background-color: black;
-	color: white;
-	text-align: center;
-	padding: 10px;
-	width: 100%;
-	bottom: 0;
-}
-.foot {
-	position: sticky;
-	background-color: black;
-	color: white;
-	text-align: center;
-	padding: 10px;
-	width: 100%;
-	bottom: 0;
+    position: sticky;
+    background-color: black;
+    color: #6d57cb;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+    bottom: 0;
 }

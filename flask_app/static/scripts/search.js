@@ -2,6 +2,12 @@ $(function () {
 
     const searchInput = $("#searchInput");
     const itemsDiv = $("#searchResults");
+    $(searchInput).keypress((key) => key.keyCode == 13 ? getItems(): null);
+    $("#searchButton").click(() => getItems());
+    $("#orderBy").change(() => orderItems());
+    $("#displayOrder").change(() => displayOrder());
+    $("#filterBy").change(() => filterItems());
+    getItems();
 
     function getItems () {
         let name = searchInput.val().toLowerCase();
@@ -81,9 +87,4 @@ $(function () {
         $(itemsDiv).find('.ItemCard').css("display", "none")
         $(itemsDiv).find(`[vendor="${filterVal}"]`).css("display", "flex")
     }
-    $("#searchButton").click(() => getItems());
-    $("#orderBy").change(() => orderItems());
-    $("#displayOrder").change(() => displayOrder());
-    $("#filterBy").change(() => filterItems());
-    getItems();
 })

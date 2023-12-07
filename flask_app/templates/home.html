@@ -5,43 +5,57 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Kartify</title>
-	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/home_page.css') }}">
+	<link rel="stylesheet" href="static/styles/common.css">
+	<link rel="stylesheet" type="text/css" href="static/styles/home_page.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	<script src="{{ url_for('static', filename='scripts/home_page.js') }}"></script>
+	<script src="static/scripts/home_page.js"></script>
 
 </head>
 
 <body>
-	<nav class="navbar">
-		<!-- LOGO -->
-		<div class="logo"><a href="/" style="color: #fff;">Kartify</a></div>
+	<header>
+		<nav class="navbar">
+			<!-- LOGO -->
+			<div class="logo"><a href="/">Kartify</a></div>
+			<!-- NAVIGATION MENU -->
+			<ul class="nav-links">
+				<div class="search-container">
+					<form action="/search" method="GET">
+						<input type="search" name="searchName" id="searchInput" placeholder="Search here"
+							aria-label="seachInput">
+					</form>
+				</div>
+				<!-- NAVIGATION MENUS -->
+				<div class="menu">
+					<li><a href="#desktop" id="desktop">Desktop</a></li>
+					<li><a href="#laptop" id="laptop">Laptop</a></li>
+				</div>
 
-		<!-- NAVIGATION MENU -->
-		<ul class="nav-links">
-
-			<div class="search-container">
-				<form action="/search" method="GET">
-					<input type="search" name="searchName" id="searchInput" placeholder="Search here"
-						aria-label="seachInput">
-				</form>
-			</div>
-
-			<!-- NAVIGATION MENUS -->
-			<div class="menu">
-
-				<li><a href="#desktop" id="desktop">Desktop</a></li>
-				<li><a href="#laptop" id="laptop">Laptop</a></li>
-			</div>
-
-		</ul>
-	</nav>
+			</ul>
+		</nav>
+	</header>
 	<div class="section1">
-		<img src="{{ url_for('static', filename='/images/hero_laptop6.jpg') }}" alt="Snow"
-			style="width: 100%; height: 600px;">
-		<h1> EVERY DAY IS BLACK FRIDAY !!</h1>
-		<button type="button" id="all">SHOP YOUR LAPTOP AND DESKTOP</button>
+		<div id="bgImg"></div>
+		<div id="headline">
+			<h1>EVERY DAY IS BLACK FRIDAY!</h1>
+			<button type="button" id="all">BEGIN SHOPPING NOW!</button>
+		</div>
 	</div>
-	<h2> Shop by Brand </h2>
+	<section id="aboutSection">
+		<h2>Find the best deals on computers you want to buy</h2>
+		<div class="siteShowcase">
+			<p>Browse through our curated collections of laptops and desktops and click on the ones you like to go
+				directly to the shopping site</p>
+			<img class="siteShowcaseImg" src="static/images/kartify-search-showcase.png">
+		</div>
+		<h2>Narrow down on your technological desires...</h2>
+		<div class="siteShowcase">
+			<img class="siteShowcaseImg" src="static/images/kartify-filter-showcase.png">
+			<p>Compare prices from hundreds of shopping sites in one place. Quickly filter items according to your
+				preferences</p>
+		</div>
+	</section>
+	<h2 id="startShopping"> Pick your brand to get started </h2>
 	<div class="flex-container">
 		<div class="card" id="ASUS">
 			<img src="{{ url_for('static', filename='/images/asus_laptop7.jpg') }}" alt="Avatar" style="width:100%">
@@ -54,7 +68,6 @@
 			<div class="container">
 				<h4><b>HP</b></h4>
 			</div>
-
 		</div>
 		<div class="card" id="LENOVO">
 			<img src="{{ url_for('static', filename='/images/hero_laptop1.jpg') }}" alt="Avatar" style="width:100%">
@@ -72,7 +85,7 @@
 	<div id="explainer"></div>
 	<div class="flex-content" id="anchorContent"></div>
 
-<footer class="foot">2023 Kartify</footer>
+	<footer></footer>
 
 
 </body>

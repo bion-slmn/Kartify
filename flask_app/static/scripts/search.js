@@ -34,8 +34,8 @@ $(function () {
                         "        </div>",
                         "        <div class='ItemInfo'>",
                         "            <div class='ItemName'>" + itemName + "</div>",
-                        "            <div>From&nbsp<span class='ItemVendor'>" + itemVendor + "</span></div>",
-                        "            <div>KSH&nbsp<span class='ItemPrice'>" + itemPrice + "</span></div>",
+                        "            <div>From&nbsp;<span class='ItemVendor'>" + itemVendor + "</span></div>",
+                        "            <div>KSH&nbsp;<span class='ItemPrice'>" + itemPrice + "</span></div>",
                         "        </div>",
                         "    </a>",
                         "</article>"

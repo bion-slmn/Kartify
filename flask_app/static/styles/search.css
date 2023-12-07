@@ -132,13 +132,3 @@ select {
     text-overflow: ellipsis;
     width: 200px;
 }
-
-.foot {
-    position: sticky;
-    background-color: black;
-    color: #6d57cb;
-    text-align: center;
-    padding: 10px;
-    width: 100%;
-    bottom: 0;
-}

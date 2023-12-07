@@ -76,7 +76,7 @@ header {
 input[type=search],
 input[type=button],
 select {
-    padding: 2px;
+    padding: 4px 0px 4px 6px;
     border-radius: 8px;
 }
 

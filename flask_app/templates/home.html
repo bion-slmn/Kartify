@@ -5,10 +5,10 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Kartify</title>
-	<link rel="stylesheet" href="static/styles/common.css">
-	<link rel="stylesheet" type="text/css" href="static/styles/home_page.css">
+	<link rel="stylesheet" href="../static/styles/common.css">
+	<link rel="stylesheet" type="text/css" href="../static/styles/home_page.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-	<script src="static/scripts/home_page.js"></script>
+	<script src="../static/scripts/home_page.js"></script>
 
 </head>
 
@@ -27,8 +27,8 @@
 				</div>
 				<!-- NAVIGATION MENUS -->
 				<div class="menu">
-					<li><a href="#desktop" id="desktop">Desktop</a></li>
-					<li><a href="#laptop" id="laptop">Laptop</a></li>
+					<li><a href="/search?searchName=desktop" id="desktop">Desktop</a></li>
+					<li><a href="/search?searchName=laptop" id="laptop">Laptop</a></li>
 				</div>
 
 			</ul>
@@ -46,11 +46,11 @@
 		<div class="siteShowcase">
 			<p>Browse through our curated collections of laptops and desktops and click on the ones you like to go
 				directly to the shopping site</p>
-			<img class="siteShowcaseImg" src="static/images/kartify-search-showcase.png">
+			<img class="siteShowcaseImg" alt="Site screenshot" src="../static/images/kartify-search-showcase.png">
 		</div>
 		<h2>Narrow down on your technological desires...</h2>
 		<div class="siteShowcase">
-			<img class="siteShowcaseImg" src="static/images/kartify-filter-showcase.png">
+			<img class="siteShowcaseImg" alt="Site screenshot" src="../static/images/kartify-filter-showcase.png">
 			<p>Compare prices from hundreds of shopping sites in one place. Quickly filter items according to your
 				preferences</p>
 		</div>
@@ -58,25 +58,25 @@
 	<h2 id="startShopping"> Pick your brand to get started </h2>
 	<div class="flex-container">
 		<div class="card" id="ASUS">
-			<img src="{{ url_for('static', filename='/images/asus_laptop7.jpg') }}" alt="Avatar" style="width:100%">
+			<img src="../static/images/asus_laptop7.jpg" alt="Avatar" style="width:100%">
 			<div class="container">
 				<h4><b>ASUS</b></h4>
 			</div>
 		</div>
 		<div class="card" id="HP">
-			<img src="{{ url_for('static', filename='/images/hero_laptop6.jpg') }}" alt="Avatar" style="width:100%">
+			<img src="../static/images/hero_laptop6.jpg" alt="Avatar" style="width:100%">
 			<div class="container">
 				<h4><b>HP</b></h4>
 			</div>
 		</div>
 		<div class="card" id="LENOVO">
-			<img src="{{ url_for('static', filename='/images/hero_laptop1.jpg') }}" alt="Avatar" style="width:100%">
+			<img src="../static/images/hero_laptop1.jpg" alt="Avatar" style="width:100%">
 			<div class="container">
 				<h4><b>LENOVO</b></h4>
 			</div>
 		</div>
 		<div class="card" id="APPLE">
-			<img src="{{ url_for('static', filename='/images/hero_laptop6.jpg') }}" alt="Avatar" style="width:100%">
+			<img src="../static/images/hero_laptop6.jpg" alt="Avatar" style="width:100%">
 			<div class="container">
 				<h4><b>APPLE</b></h4>
 			</div>

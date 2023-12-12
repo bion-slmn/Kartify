@@ -1,6 +1,9 @@
 # Kartify
-This is a flask web application that is intended to provide a one-stop browsing point for electronics across different sites.
-There is also an api that runs alongside the application.
+This is a flask web application that is intended to provide a one-stop browsing point for laptops and desktops across different sites.
+You can filter the results by vendor or price. Once You have found the item, the web app will direct you to the seller site where a purchase can be completed.
+
+![Kartify Screen Short](https://github.com/bion-slmn/Kartify/assets/122830539/ab81cd91-ad55-47d4-8199-96313191de79)
+
 
 The application scrapes specific website at given intervals and stores the data in a mysql database. 
 This allows ease on manipulation of data, reducing the number of requests and preventing the app from being blocked but also makes the application faster
@@ -58,15 +61,15 @@ $ ```sudo service mysql start```
 
 $ ```cat setup_db.sql | mysql -u root -p```
 
-### Scrape data and Load the database.
-$ ```python3 load_data.py```
-
 ### set environmental variable for DABATABASE
 $ ```export PROJECT_USER="name of the user that was set in setup_db.sql"```
 
 $ ```export PROJECT_PWD="password of the user that was set in setup_db.sql"```
 
 $ ```export PROJECT_USER="bion_dev" PROJECT_PWD="bion_dev_pwd"```
+
+### Scrape data and Load the database.
+$ ```python3 load_data.py```
 
 ### START THE FLASK APP AND API
 $ ```python3 -m flask_app.views```

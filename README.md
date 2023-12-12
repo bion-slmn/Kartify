@@ -58,15 +58,15 @@ $ ```sudo service mysql start```
 
 $ ```cat setup_db.sql | mysql -u root -p```
 
-### Scrape data and Load the database.
-$ ```python3 load_data.py```
-
 ### set environmental variable for DABATABASE
 $ ```export PROJECT_USER="name of the user that was set in setup_db.sql"```
 
 $ ```export PROJECT_PWD="password of the user that was set in setup_db.sql"```
 
 $ ```export PROJECT_USER="bion_dev" PROJECT_PWD="bion_dev_pwd"```
+
+### Scrape data and Load the database.
+$ ```python3 load_data.py```
 
 ### START THE FLASK APP AND API
 $ ```python3 -m flask_app.views```

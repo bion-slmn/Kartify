@@ -85,24 +85,6 @@ def desktop(vendor):
     return render_template('display.html', item_dict=all_items, items='Desktop')
 
 
-@app.route('/all/', defaults={'vendor': None})
-@app.route('/all/<vendor>')
-def all_items(vendor):
-    '''return all items owned by the vendor
-
-        -parameter
-     vendor:(string) this the name of the vendor it can eiter be
-     Phonex or Smartbuy
-     if vendor is none it will return the total items of all vendors
-     '''
-    if vendor:
-        vend = seller_class(vendor)
-        if vend:
-            return storage.all(vendor)
-        abort(404, 'Seller Not available')
-
-    # if nor vendor is specified
-    return storage.all()
 
 @app.route('/search/', methods=["GET"])
 def search():
@@ -112,17 +94,6 @@ def search():
     searchName = request.args.get('searchName')
     return render_template('search.html', searchName=searchName)
 
-
-@app.route('/compare/<item_1>/<item_2>')
-def compare(item_1, item_2):
-    searchitem_1 = storage.search(item_1)
-    searchitem_2 = storage.search(item_2)
-    search_items = {**searchitem_1, **searchitem_2}
-    return render_template('compare.html', item_dict=search_items, item1=item_1, item2=item_2)
-
-# @app.route('/home')
-# def home():
-#     return render_template('index.html')
 
 @app.route('/')
 def home1():

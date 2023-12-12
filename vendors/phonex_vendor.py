@@ -8,7 +8,8 @@ import requests
 class Phonex(Vendor, Base):
     ''' this class defines a vendor called kilimall'''
     __tablename__ = 'phonex'
-
+    
+    # using classmethod as a factory method to create objects
     @classmethod
     def load_items(cls, item):
         '''it loads all the item of the vendor from the

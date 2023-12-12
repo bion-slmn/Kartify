@@ -43,6 +43,10 @@ class Db_storage:
     def load(self):
         '''create all tables and create a session '''
         Base.metadata.create_all(bind=self.__engine)
+
+        # expire on commit is set to false because the requests are readonly
+        # scoped_session is used to ensure each request is independent of others
+        # and its important for multi-request environment
         session = sessionmaker(bind=self.__engine, expire_on_commit=False)
         self.__session = scoped_session(session)
 
@@ -65,12 +69,12 @@ class Db_storage:
         new_dict = {}
         if cls is None:
             for v_class in vendor_class.values():
-                print(v_class)
                 all_obj = self.__session.query(v_class).all()
                 for obj in all_obj:
                     key = '{}.{}'.format(obj.name, obj.vendor)
                     new_dict[key] = obj.to_dict()
             return new_dict
+
         elif cls and cls in vendor_class:
             v_class = vendor_class.get(cls)
             all_obj = self.__session.query(v_class).all()

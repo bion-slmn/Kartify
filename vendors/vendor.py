@@ -11,6 +11,7 @@ Base = declarative_base()
 
 class Vendor:
     ''' this is the base model for all vendors'''
+    # creating columns for the vendor table
     name = Column(Text)
     price = Column(Text)
     link = Column(Text)

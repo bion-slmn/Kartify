@@ -10,6 +10,7 @@ class Smartbuy(Vendor, Base):
 
     __tablename__ = 'smartbuy'
 
+    # using classmethod as a factory method to create objects
     @classmethod
     def load_items(cls, item):
         '''it loads all the item of the vendor from the file
@@ -41,7 +42,8 @@ class Smartbuy(Vendor, Base):
                 new['price'] = laptop.find('bdi').get_text().strip('KSHh')
                 new['vendor'] = cls.__name__
                 new['catergory'] = 'laptop' if item == 'laptop' else 'desktop'
-
+                
+                # creating instances of the class and storing in the db
                 obj = cls(**new)
                 storage.new(obj)
                 storage.save()

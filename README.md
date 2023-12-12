@@ -103,7 +103,9 @@ You could also filter the results by vendor. This chooses all computers from a s
 
 ## Contributing
 Bion Solomon - bionsol25@gmail.com
+
 Lucas Owen - sanguraowens@gmail.com
+
 Ambrose Kol - kolus7381@gmail.com
 
 

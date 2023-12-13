@@ -75,5 +75,38 @@ $ ```python3 load_data.py```
 $ ```python3 -m flask_app.views```
 
 $ ```python3 -m api.v1.app```
+## USAGE
+The application will be running on http://localhost:5001 when not deployed on 
+remote server. 
+You can view the deployed site on Github here https://bion-slmn.github.io/Kartify/flask_app/templates/home.html
+However, that is just part of the website as Github only accepts static files.
 
-The application will be running on http://localhost:5001.
+The application start at the home_page. As shown below.
+
+![home_page kartigy](https://github.com/bion-slmn/Kartify/assets/122830539/4cb7c385-28e3-499c-b2f7-b308cff63301)
+
+To start your journey, click the BEGIN SHOPPING NOW BUTTON, this will take you where you shop both laptops
+and desktops by brand, as shown in the images below
+
+![begin shopping](https://github.com/bion-slmn/Kartify/assets/122830539/0ff378be-9c27-4576-abac-83b081ed5f57)
+
+When you click the BEGIN SHOPPING NOW !! button
+![Shop_by_brand](https://github.com/bion-slmn/Kartify/assets/122830539/dbf43638-78ce-4280-b6f8-ed3ac81d893f)
+
+Select any brand that you would like to view the items on sale.
+In this example ASUS brand in selected . This should display all the ASUS laptops and desktops from all vendors.
+By default they will be arranged from the lowest priced to the highest priced computer.
+As shown in the image below.
+![Display Page](https://github.com/bion-slmn/Kartify/assets/122830539/13149efa-df64-41d6-a08e-bc8e1d514a82)
+
+You could also filter the results by vendor. This chooses all computers from a specific vendor
+
+## Contributing
+Bion Solomon - bionsol25@gmail.com
+
+Lucas Owen - sanguraowens@gmail.com
+
+Ambrose Kol - kolus7381@gmail.com
+
+
+
